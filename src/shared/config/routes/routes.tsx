@@ -1,4 +1,5 @@
 import { type RouteProps } from 'react-router-dom';
+
 import { TestPage } from '@/pages/TestPage';
 
 export enum AppRoutes {

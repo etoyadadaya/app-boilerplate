@@ -1,7 +1,8 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { routes } from '@/shared/config/routes/routes';
 import { Suspense } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import { PageLoader } from '@/widgets/PageLoader';
+import { routes } from '@/shared/config/routes/routes';
 
 const AppRouter = () => (
   <BrowserRouter>
