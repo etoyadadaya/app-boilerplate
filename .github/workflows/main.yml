@@ -32,11 +32,10 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run build
-      - name: Upload production artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-release
-          path: dist/
+      - name: install modules if cache invalid
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm install -f
+      - name: build production project
+        run: npm run build
+      - name: linting typescript
+        run: npm run lint
