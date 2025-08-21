@@ -15,14 +15,22 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.85.5",
+    "ky": "^1.9.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.1",
+    "styled-components": "^6.1.19",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
     "@stylelint/postcss-css-in-js": "^0.38.0",
+    "@types/node": "^24.3.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.34",
     "@vitejs/plugin-react": "^5.0.0",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
@@ -45,7 +53,6 @@
       "prettier --write"
     ],
     "*.{css,scss}": [
-      "stylelint --fix",
       "prettier --write"
     ],
     "*.{json,md}": [
